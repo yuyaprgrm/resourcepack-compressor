@@ -5,9 +5,11 @@ inputs:
   source-directory:
     description: 'directory to be compressed as .mcpack. if your resource pack is in your_repository/resource_pack, then set resource_pack.'
     default: ''
+    type: string
   pack-name:
     description: 'resource pack name: pack-name.mcpack'
-    default: 
+    required: true
+    type: string
 
 run:
   using: ubuntu-latest
