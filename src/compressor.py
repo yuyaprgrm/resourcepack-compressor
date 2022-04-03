@@ -18,8 +18,8 @@ shutil.copytree(resource_pack_path, resource_pack_filtered_path, ignore=rule)
 # make zip archive
 shutil.make_archive(pack_name, 'zip', resource_pack_filtered_path)
 
-file_name_zip = '%s.zip' % pack_name
-file_name_mcpack = '%s.mcpack' % pack_name
+file_name_zip = f"{pack_name}.zip"
+file_name_mcpack = f"{pack_name}.mcpack"
 
 # rename zip to 
 os.rename(file_name_zip, file_name_mcpack)
