@@ -24,7 +24,7 @@ runs:
         python-version: '3.x'
         architecture: 'x64'
     - name: compress pack
-      run: python ${{GITHUB_ACTION_PATH}}/src/compressor.py
+      run: python $GITHUB_ACTION_PATH/src/compressor.py
       shell: bash
       env: 
         PACK_PATH: ${{ inputs.source-directory }}
