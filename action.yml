@@ -32,4 +32,4 @@ runs:
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with: 
-        path: ${{ inputs.pack-name }}.mcpack
+        path: ${{ github.workspace }}/${{ inputs.pack-name }}.mcpack
