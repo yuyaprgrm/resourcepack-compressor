@@ -1,4 +1,4 @@
-name: minecraft-bedrock-resourcepacks-compressor
+name: resourcepack-compressor
 author: famima65536
 description: make .mcpack file automatically with simple config.
 inputs:
