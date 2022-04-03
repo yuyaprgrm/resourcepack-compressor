@@ -19,5 +19,7 @@ shutil.copytree(resource_pack_path, resource_pack_filtered_path, ignore=rule)
 file_name_zip = shutil.make_archive(os.path.join(workspace, pack_name), 'zip', resource_pack_filtered_path)
 file_name_mcpack = f"{pack_name}.mcpack"
 
+print(f"archive was created in {file_name_zip}")
+
 # rename zip to 
 os.rename(file_name_zip, file_name_mcpack)
