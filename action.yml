@@ -25,6 +25,7 @@ runs:
         architecture: 'x64'
     - name: compress pack
       run: python 
+      shell: bash
       env: 
         PACK_PATH: ${{ inputs.source-directory }}
         PACK_NAME: ${{ inputs.pack-name }}
