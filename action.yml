@@ -11,8 +11,8 @@ inputs:
     required: true
     type: string
 
-run:
-  using: ubuntu-latest
+runs:
+  using: composite
   steps:
     - name: check out repository
       uses: actions/checkout@v3
