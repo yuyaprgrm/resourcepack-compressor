@@ -1,0 +1,32 @@
+name: minecraft-bedrock-resourcepacks-compressor
+author: famima65536
+description: make .mcpack file automatically with simple config.
+inputs:
+  source-directory:
+    description: 'directory to be compressed as .mcpack. if your resource pack is in your_repository/resource_pack, then set resource_pack.'
+    default: ''
+  pack-name:
+    description: 'resource pack name: pack-name.mcpack'
+    default: 
+
+run:
+  using: ubuntu-latest
+  steps:
+    - name: check out repository
+      uses: actions/checkout@v3
+      with:
+        path: resource_pack
+    - name: setup python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+        architecture: 'x64'
+    - name: compress pack
+      run: python 
+      env: 
+        PACK_PATH: ${{ inputs.source-directory }}
+        PACK_NAME: ${{ inputs.pack-name }}
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with: 
+        path: ${{ inputs.pack-name }}.mcpack
