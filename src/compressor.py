@@ -20,4 +20,4 @@ file_name_zip = f"{pack_name}.zip"
 file_name_mcpack = f"{pack_name}.mcpack"
 
 # rename zip to 
-os.rename(os.path.join(pack_dest, file_name_zip), os.path.join(pack_dist, file_name_mcpack))
+os.rename(os.path.join(pack_dest, file_name_zip), os.path.join(pack_dest, file_name_mcpack))
