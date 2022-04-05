@@ -14,7 +14,7 @@ rule = shutil.ignore_patterns(".*")
 shutil.copytree(pack_src, workspace, ignore=rule)
 
 # make zip archive
-shutil.make_archive(pack_dest, 'zip', workspace)
+shutil.make_archive(os.path.join(pack_dest, pack_name), 'zip', workspace)
 
 file_name_zip = f"{pack_name}.zip"
 file_name_mcpack = f"{pack_name}.mcpack"
