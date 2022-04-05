@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
         with:
           path: resourcepack
 
