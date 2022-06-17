@@ -33,7 +33,7 @@ jobs:
           path: resourcepack
 
       - name: compress pack
-        uses: famima65536/resourcepack-compressor@v2
+        uses: famima65536/resourcepack-compressor@v2.1
         with:
           source: resourcepack
           destination: artifact
