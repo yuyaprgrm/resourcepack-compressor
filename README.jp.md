@@ -1,6 +1,5 @@
 # 導入
-このGitHub Actionはリポジトリ上にあるMinecraft統合版のリソースパックを.mcpack形式に圧縮するものです。.で始まるディレクトリは無視されます。
-
+このGitHub Actionはリポジトリ上にあるMinecraft統合版のリソースパックを.mcpack形式に圧縮するものです。.で始まるディレクトリは無視され、(v2.1より).jsonで終わるファイルはデフォルトで軽量化(minify)されます。
 
 # Bedrock Resource Pack Compressor v2 使用例
 以下の構造を持つ _ExampleResourcePack_ というレポジトリをパックとして圧縮したいとします。 
@@ -39,6 +38,7 @@ jobs:
           source: resourcepack
           destination: artifact
           pack-name: ExamplePack
+          # minify: true
 
       - name: upload artifact
         uses: actions/upload-artifact@v3

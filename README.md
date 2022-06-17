@@ -1,8 +1,8 @@
 # Introduction
-This is a github action to compress resource pack for Minecraft Bedrock Edition on you repository into .pack style ignoring directory starting wih dot (e.g. .test).
+This is a github action to compress resource pack for Minecraft Bedrock Edition on you repository into .pack style ignoring directory starting wih dot (e.g. .test) and minify json files (from v2.1).
 
 
-# Bedrock Resource Pack Compressor v2
+# Bedrock Resource Pack Compressor v2.1
 If you want to compress in repository, _ExampleResourcePack_ that has directory structure below.
 ```
 ExampleResourcePack
@@ -39,7 +39,7 @@ jobs:
           source: resourcepack
           destination: artifact
           pack-name: ExamplePack
-
+          # minify: true
       - name: upload artifact
         uses: actions/upload-artifact@v3
         with:
