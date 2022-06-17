@@ -30,6 +30,7 @@ runs:
         python-version: '3.x'
         architecture: 'x64'
     - name: install dependencies
+      shell: bash
       run: pip install -r $GITHUB_ACTION_PATH/requirements.txt
     - name: compress pack
       run: python $GITHUB_ACTION_PATH/src/compressor.py
